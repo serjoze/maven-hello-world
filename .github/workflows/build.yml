@@ -34,7 +34,7 @@ jobs:
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5.6
       with:
-           image: neve435/test-docker
+           image: neve435/maven-hello-workd
            registry: docker.io
            username: ${{ secrets.DOCKER_USERNAME }}
            password: ${{ secrets.DOCKER_PASSWORD }}
