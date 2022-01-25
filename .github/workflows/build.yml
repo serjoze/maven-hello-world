@@ -36,7 +36,6 @@ jobs:
       with:
          image: neve435/maven-hello-world:maven-hello
          tags: v1, latest
-         registry: registry-url.io
-         dockerfile: Dockerfile.ci
+         registry: docker.io
          username: ${{ secrets.DOCKER_USERNAME }}
          password: ${{ secrets.DOCKER_PASSWORD }}
