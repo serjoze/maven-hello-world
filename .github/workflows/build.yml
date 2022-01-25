@@ -36,5 +36,6 @@ jobs:
       with:
            image: neve435/maven-hello-world
            registry: docker.io
+           dockerfile: my-app/Dockerfile
            username: ${{ secrets.DOCKER_USERNAME }}
            password: ${{ secrets.DOCKER_PASSWORD }}
