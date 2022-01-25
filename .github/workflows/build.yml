@@ -32,10 +32,9 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Build & push Docker image
-      uses: mr-smithers-excellent/docker-build-push@v5 
+      uses: mr-smithers-excellent/docker-build-push@v5
       with:
-         image: neve435/maven-hello-world:maven-hello
-         tags: v1
-         registry: docker.io
-         username: ${{ secrets.DOCKER_USERNAME }}
-         password: ${{ secrets.DOCKER_PASSWORD }}
+           image: neve435/maven-hello-world
+           registry: docker.io
+           username: ${{ secrets.DOCKER_USERNAME }}
+           password: ${{ secrets.DOCKER_PASSWORD }}
