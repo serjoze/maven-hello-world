@@ -68,3 +68,4 @@ ENV JAVA_HOME=/opt/java/openjdk \
     PATH="/opt/java/openjdk/bin:$PATH"
 
 CMD ["jshell"]
+COPY target/1.0-SNAPSHOT.jar /demo.jar
