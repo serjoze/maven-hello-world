@@ -25,7 +25,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
     - name: build and push docker image
-      uses: mr-smithers-excellent/docker-build-push@v5
+      uses: mr-smithers-excellent/docker-build-push@v4
       with:
        image: neve435/maven-hello-workd
        tags: v1, latest
