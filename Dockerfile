@@ -66,4 +66,8 @@ RUN set -eux; \
 
 ENV JAVA_HOME=/opt/java/openjdk \
     PATH="/opt/java/openjdk/bin:$PATH"
-CMD ["jshell"]
+
+#CMD ["jshell"]
+
+COPY target/my-app-1.0-SNAPSHOT.jar /demo.jar
+CMD ["java", "-jar", "/demo.jar"]
