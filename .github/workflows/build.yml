@@ -36,7 +36,6 @@ jobs:
       with:
        image: neve435/maven-hello-workd
        registry: docker.io
-       dockerFile: maven-hello-world/maven-hello-world/DockerFile
        username: ${{ secrets.DOCKER_USERNAME }}
        password: ${{ secrets.DOCKER_PASSWORD }}
   
