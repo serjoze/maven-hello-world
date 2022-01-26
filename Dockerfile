@@ -1,13 +1,7 @@
 FROM alpine:3.14
-#You can start with any base Docker Image that works for you
 
-RUN echo "#!/bin/bash\n" > /startscript.sh
-RUN echo "mkdir github\n" >> /startscript.sh
-RUN echo "cd github\n" >> /startscript.sh
-RUN echo "git clone \$github\n" >> /startscript.sh
-RUN echo "cd *\n" >> /startscript.sh
-RUN echo "make dockertest\n" >> /startscript.sh
-
-RUN chmod +x /startscript.sh
-
-CMD /startscript.sh
+# copy the packaged jar file into our docker image
+COPY target/1.0-SNAPSHOT.jar /mymaven.jar
+ 
+# set the startup command to execute the jar
+CMD ["java", "-jar", "/mymaven.jar"]
