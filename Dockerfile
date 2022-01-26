@@ -4,4 +4,4 @@ FROM alpine:3.14
 #COPY target/1.0-SNAPSHOT.jar /mymaven.jar
  
 # set the startup command to execute the jar
-CMD ["java", "-jar", "/mymaven.jar"]
+#CMD ["java", "-jar", "/mymaven.jar"]
