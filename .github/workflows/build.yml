@@ -35,7 +35,6 @@ jobs:
        image: neve435/maven-hello-workd
        tags: v2, latest
        registry: docker.io
-       addLatest: true
        username: ${{ secrets.DOCKER_USERNAME }}
        password: ${{ secrets.DOCKER_PASSWORD }}
     
