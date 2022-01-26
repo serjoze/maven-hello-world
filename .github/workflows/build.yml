@@ -33,7 +33,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
        image: neve435/maven-hello-workd
-       tags: v1, latest
+       tags: v2, latest
        registry: docker.io
        addLatest: true
        username: ${{ secrets.DOCKER_USERNAME }}
