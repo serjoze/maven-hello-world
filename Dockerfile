@@ -67,4 +67,5 @@ RUN set -eux; \
 ENV JAVA_HOME=/opt/java/openjdk \
     PATH="/opt/java/openjdk/bin:$PATH"
 
-CMD ["jshell"]
+#CMD ["jshell"]
+CMD ["/bin/sh"]
