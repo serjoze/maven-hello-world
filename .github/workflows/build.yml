@@ -33,7 +33,7 @@ jobs:
       run: pwd
       
     - name: check contained of folder
-      run: ls -l my-app/
+      run: ls -l my-app/target/
       
     - name: Checkout 
       uses: actions/checkout@v2
