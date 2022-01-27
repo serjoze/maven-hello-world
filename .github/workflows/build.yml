@@ -32,6 +32,9 @@ jobs:
     - name: check target
       run: pwd
       
+    - name: check contained of folder
+      run: ls -l maven-hello-world/
+      
     - name: Checkout 
       uses: actions/checkout@v2
   
