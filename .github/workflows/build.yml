@@ -38,19 +38,20 @@ jobs:
     - name: check contained of root dir project
       run: ls -l
       
-    - name: upload to artifact
-    - uses: actions/upload-artifact@v1
-      with:
-       name: hello-jar
-       path: my-app/target/1.0-SNAPSHOT.jar
+    #- name: upload to artifact
+   # - uses: actions/upload-artifact@v1
+    #  with:
+    #   name: hello-jar
+   #    path: my-app/target/1.0-SNAPSHOT.jar
       
-    - name: Checkout 
-      uses: actions/checkout@v2
-    - name: Download from artifact  
-    - uses: actions/download-artifact@v1
-      with:
-          name: hello-jar
-          path: my-app/target/
+   # - name: Checkout 
+  #    uses: actions/checkout@v2
+   # - name: Download from artifact  
+   # - uses: actions/download-artifact@v1
+   #   with:
+     #     name: hello-jar
+    #      path: my-app/target/
+          
     - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & push Docker image
       with:
