@@ -33,7 +33,7 @@ jobs:
       run: pwd
       
     - name: check contained of folder
-      run: ls -l maven-hello-world/
+      run: ls -l
       
     - name: Checkout 
       uses: actions/checkout@v2
