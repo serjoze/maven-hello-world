@@ -10,7 +10,7 @@ public class App
     {
         System.out.println( "Hello Sergey World!" );
         System.out.println( "quick task 20000" );
-        System.out.println("A NullPointerException is a drag...");
+        //System.out.println("A NullPointerException is a drag...");
        // Object myObject = null;
         /**
          * Checker prevents this from compiling...
