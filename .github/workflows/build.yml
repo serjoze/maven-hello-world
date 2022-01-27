@@ -29,6 +29,9 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file my-app/pom.xml install
       
+    - name: check target
+      run: echo hello > target/
+      
     - name: Checkout 
       uses: actions/checkout@v2
   
