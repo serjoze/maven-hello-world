@@ -25,8 +25,12 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-        
+    
     - name: Build with Maven
+    
+    - shell:
+           script: "echo Build Number: $BUILD_NUMBER"
+           
       run: mvn -B package --file my-app/pom.xml install
       
     - name: check target
