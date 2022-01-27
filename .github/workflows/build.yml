@@ -30,7 +30,7 @@ jobs:
       run: mvn -B package --file my-app/pom.xml install
       
     - name: check target
-      run: echo hello > target/1.0-SNAPSHOT.jar
+      run: ls -l my-app/target/1.0-SNAPSHOT.jar
       
     - name: Checkout 
       uses: actions/checkout@v2
