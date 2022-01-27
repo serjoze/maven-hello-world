@@ -32,8 +32,11 @@ jobs:
     - name: check target
       run: pwd
       
-    - name: check contained of folder
+    - name: check contained of target
       run: ls -l my-app/target/
+      
+    - name: check contained of root dir project
+      run: ls -l
       
     - name: Checkout 
       uses: actions/checkout@v2
