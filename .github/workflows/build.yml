@@ -27,7 +27,7 @@ jobs:
         cache: maven
         
     - name: set Build verson
-      run: mvn versions:set -DnewVersion=1.0.1 -DprocessAllModules  versions:commit -B package --file my-app/pom.xml
+      run: mvn versions:set -DnewVersion=1.0.1 -DprocessAllModules  versions:commit --file my-app/pom.xml -B package 
       #run: mvn --batch-mode release:update-versions -DdevelopmentVersion=1.0.1 --file my-app/pom.xml
       
          
