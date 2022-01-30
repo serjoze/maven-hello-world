@@ -26,7 +26,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: set Build verson
-      run: mvn versions:set -DnewVersion=1.0.1 --file my-app/pom.xml -B package
+      run: mvn versions:set -DnewVersion=1.0.1 --file my-app/pom.xml install
       
     #- name: Build with Maven
     #  run: mvn -B package --file my-app/pom.xml install
