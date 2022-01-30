@@ -25,16 +25,14 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+        
     - name: set Build verson
-      #run: mvn versions:set -DnewVersion=1.0.1 -DprocessAllModules --file my-app/pom.xml
-      run: mvn --batch-mode release:update-versions -DdevelopmentVersion=1.0.1 --file my-app/pom.xml
+      run: mvn versions:set -DnewVersion=1.0.1 -DprocessAllModules  versions:commit -B package --file my-app/pom.xml
+      #run: mvn --batch-mode release:update-versions -DdevelopmentVersion=1.0.1 --file my-app/pom.xml
       
-    - name: Commit
-      run: mvn versions:commit --file my-app/pom.xml
-      
-      
-    - name: Build with Maven
-      run: mvn -B package --file my-app/pom.xml
+         
+    #- name: Build with Maven
+    #  run: mvn -B package --file my-app/pom.xml
       
     - name: check target
       run: pwd
