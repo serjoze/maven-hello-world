@@ -26,7 +26,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: set Build verson
-      run: mvn versions:set -DnewVersion=1.0.1 -DprocessAllModules --file my-app/pom.xml
+      #run: mvn versions:set -DnewVersion=1.0.1 -DprocessAllModules --file my-app/pom.xml
+      run: mvn --batch-mode release:update-versions -DdevelopmentVersion=1.0.1 --file my-app/pom.xml
       
     - name: Commit
       run: mvn versions:commit --file my-app/pom.xml
