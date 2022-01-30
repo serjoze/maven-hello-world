@@ -33,8 +33,9 @@ jobs:
     - name: Commit
       run: mvn versions:commit -DprocessAllModules --file my-app/pom.xml
          
-    #- name: Build with Maven
-    #  run: mvn -B package --file my-app/pom.xml
+    - name: Build with Maven
+      #run: mvn -B package --file my-app/pom.xml
+      run: mvn install --file my-app/pom.xml
       
     - name: check project root dir
       run: pwd
