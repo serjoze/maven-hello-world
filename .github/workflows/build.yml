@@ -29,7 +29,7 @@ jobs:
       run: mvn versions:set -DnewVersion=1.0.1 --file my-app/pom.xml
       
     - name: Commit
-      run: mvn versions:commit
+      run: mvn versions:commit --file my-app/pom.xml
       
       
     #- name: Build with Maven
