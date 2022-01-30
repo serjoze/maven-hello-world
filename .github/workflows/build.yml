@@ -29,7 +29,7 @@ jobs:
       run: mvn versions:set -DnewVersion=1.0.1 --file my-app/pom.xml
       
     - name: git commit  
-      run: git commit -a -m "hotfix release 1.0.1"
+      run: git commit -a -m "hotfix release 1.0.1" config --global user.name "Sergey"
       
       
     #- name: Build with Maven
