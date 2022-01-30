@@ -28,8 +28,8 @@ jobs:
     - name: set Build verson
       run: mvn versions:set -DnewVersion=1.0.1 --file my-app/pom.xml
       
-    - name: git commit  
-      run: git commit -a -m "hotfix release 1.0.1" config user.name "Sergey"
+    - name: Commit
+      run: mvn versions:commit
       
       
     #- name: Build with Maven
